@@ -114,7 +114,7 @@ _ = ax.set_ylabel('standardized groupsize')
 
 # ### Exercise 8 (max 5 points)
 #
-# Consider this statistical model: the standardized group size is proportional to the standardized area. Let's posit that group size follows a [normal](https://docs.pymc.io/en/v3/api/distributions/discrete.html#pymc3.distributions.continue.Normal) distribution with $\mu=\alpha\cdot A$ and standard deviation 1, where $A$ is the standardized area and $\alpha$ is the proportionality coefficient you want to estimate. Your *a priori* estimation of $\alpha$ is also normal with zero mean (and standard deviation 1). Use PyMC to sample the posterior distributions after having observed the actual values of birds seen (computed in the previous exercise).  Plot the results.
+# Consider this statistical model: the standardized group size is proportional to the standardized area. Let's posit that group size follows a [normal](https://docs.pymc.io/en/v3/api/distributions/discrete.html#pymc3.distributions.continue.Normal) distribution with $\mu=\alpha\cdot A$ and standard deviation 1, where $A$ is the standardized area and $\alpha$ is the proportionality coefficient you want to estimate. Your *a priori* estimation of $\alpha$ is also normal with zero mean (and standard deviation 1). Use PyMC to sample the posterior distributions after having observed the actual values of the standardized group size.  Plot the results.
 
 with pm.Model():
     alpha = pm.Normal('alpha', mu=0)
